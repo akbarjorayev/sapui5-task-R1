@@ -7,14 +7,19 @@
   "scripts": {
     "start": "ui5 serve -o test/mockServer.html",
     "build": "ui5 build --all --clean-dest",
-    "serve-dist": "ws --compress -d dist --open"
+    "serve-dist": "ws --compress -d dist --open",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@openui5/types": "1.148.9",
     "@types/qunit": "2.5.4",
     "@ui5/cli": "^4.0.53",
+    "@ui5/ts-interface-generator": "^0.12.0",
     "local-web-server": "^5.4.0",
+    "typescript": "^6.0.3",
     "ui5-middleware-livereload": "^3.3.1",
     "ui5-middleware-serveframework": "^3.8.1",
-    "ui5-middleware-simpleproxy": "^3.7.1"
+    "ui5-middleware-simpleproxy": "^3.7.1",
+    "ui5-tooling-transpile": "^3.11.0"
   }
 }

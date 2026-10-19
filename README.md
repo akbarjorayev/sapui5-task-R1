@@ -1,3 +1,11 @@
+## Step 38: Build Your Application
+
+In this step we're going to build our application and consume the speed of a built OpenUI5 application.
+  
+&nbsp;
+
+***
+
 ### Preview
   
   
@@ -13,7 +21,6 @@ You can download the solution for this step here: <span class="ts-only">[📥 Do
 
 Now we create a production-ready version of our OpenUI5 application that can be deployed to a web server or any other platform. For this we introduce a new build script to the `package.json`. This script starts the `ui5 build` command which initiates the build process using the UI5 build tool. It compiles and bundles all the necessary resources, such as JavaScript, CSS, and other assets, into a deployable format. By adding the `--all` option to the build script we specify that all available resources should be built including framework dependencies \(e.g. `sap.ui.core`, etc.\). It ensures that all dependencies and resources required by the application are included in the final build. The `--clean-dest` flag tells the build tool to clean the destination folder before generating a new build. It ensures that any previous build artifacts are removed before the new build is created.
 
-{% raw %}
 ```json
 {
   "name": "ui5.tutorial.walkthrough",
@@ -27,7 +34,6 @@ Now we create a production-ready version of our OpenUI5 application that can be 
   ...
 }
 ```
-{% endraw %}
 &nbsp;
 Now that we added this script to our project configuration, we can also execute it:
 
@@ -47,7 +53,6 @@ To actually use the newly added web server, we have to add a new script to our `
 
 ### package.json
 
-{% raw %}
 ```json
 {
   "name": "ui5.tutorial.walkthrough",
@@ -62,7 +67,6 @@ To actually use the newly added web server, we have to add a new script to our `
   ...
 }
 ```
-{% endraw %}
 &nbsp;
 Now it's time to start the server by executing `npm run serve-dist` in a terminal in the project root folder. Your default browser opens automatically and the built application is hosted. The `local-web-server` does not offer proxy capabilities so far, nor does it allow to open a specific HTML file in the browser. To display any actual data, it is therefore necessary to open the `test/mockServer.html` file in the browser instead of the `index.html`.
 
